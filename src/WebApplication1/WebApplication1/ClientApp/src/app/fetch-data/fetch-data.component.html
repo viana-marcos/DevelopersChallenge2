@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Últimas transações</h1>
+
+<p *ngIf="!transactions"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="transactions">
+  <thead>
+    <tr>
+      <th>Tipo de transação</th>
+      <th>Data da transação</th>
+      <th>Valor da trssnação</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.trntype }}</td>
+      <td>{{ transaction.dtposted }}</td>
+      <td>{{ transaction.trnamt }}</td>
+      <td>{{ transaction.memo }}</td>
+    </tr>
+  </tbody>
+</table>

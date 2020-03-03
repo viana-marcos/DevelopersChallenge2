@@ -1,0 +1,12 @@
+
+  
+Create table transacao
+ 
+(
+    ID int IDENTITY(1,1) PRIMARY KEY,
+    trntype varchar(300),
+	dtposted varchar(300),	
+	trnamt numeric(10,5),
+	memo varchar(300),	
+   
+)
